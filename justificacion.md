@@ -8,7 +8,7 @@
 > restricciones de órdenes, indicarlo.
 
 ## Ejercicio 6
-- Sin restricciones de órdenes. / Justificación: ...
+- Justificación: tiene O(nlogn) siendo n la cantidad de corredores, porque es el orden del merge sort 
 
 ## Ejercicio 7
 - Sin restricciones de órdenes. / Justificación: ...
