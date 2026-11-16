@@ -8,7 +8,7 @@
 > restricciones de órdenes, indicarlo.
 
 ## Ejercicio 6
-- Justificación: tiene O(nlogn) siendo n la cantidad de corredores, porque es el orden del merge sort 
+- Justificación: tiene O(nlogn) siendo n la cantidad de corredores, porque es el orden del merge sort, y la suma de resultado utiliza el índice l que no vuelve para atrás, como máximo recorre el largo del array1, entonces, no cambia el orden del merge
 
 ## Ejercicio 7
 - Sin restricciones de órdenes. / Justificación: ...

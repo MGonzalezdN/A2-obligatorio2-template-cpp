@@ -7,14 +7,15 @@
 > explícitamente. Los fragmentos de terceros o generados por IA deben además señalarse
 > con comentarios en el código fuente. La omisión de fuentes puede considerarse plagio.
 
-## Ejercicio 6
+## Ejercicio 6 duda si consulté informacion a chat tambien tiene que ponerse aca?
 - Implementación íntegramente propia, sin fuentes externas.
+
 
 ## Ejercicio 7
-- Implementación íntegramente propia, sin fuentes externas.
+- Implementación a partir del merge sort de la diapositiva, con la idea hablada en clase 
 
 ## Ejercicio 8
-- Implementación íntegramente propia, sin fuentes externas.
+- Implementación íntegramente propia, a partir de lo dado y charlado en clase.
 
 ## Ejercicio 9
 - Implementación íntegramente propia, sin fuentes externas.
