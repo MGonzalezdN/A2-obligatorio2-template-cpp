@@ -4,32 +4,30 @@
 #include <limits>
 
 using namespace std;
-int maxLikes(int* convierte,int* likes, int* bailo,int* memo, int k, int& diferenciaGoles){
-    if(k==0){
+int maxLikes(int* convierte,int* likes, int bailo,int*** memo, int k, int r, int d){
+    if(r>k){
         return 0;
     }
-    if(memo[k]!=-1){
-        return memo[k];
+    if(memo[r][d][bailo]!=-1){
+        return memo[r][d][bailo];
     }
-    //puedoUsarla o no 
-    int likesBailekConPadre=-1;
-    int likesBaileSinPadre=-1;
-    if(diferenciaGoles+convierte[k]>=1){
-        //puedoBailarConElAnterior
-         
-        if(bailo[k-1]){
-            likesBailekConPadre=likes[k]/2;
-            likesBailekConPadre+=memo[k-1];
+    
+    int diferenciaN=d+convierte[r];
+    int likesBaile=numeric_limits<int>::min();;
+    if(diferenciaN>0){
+        //atajo?
+        //no
+        if(bailo==1){
+           likesBaile=likes[r]/2 + maxLikes(convierte,likes,1,memo,k,r+1,diferenciaN-1);
         }else{
-            likesBailekConPadre=memo[k-1]+likes[k];
-        }
-        if(k-2>=1){
-            likesBaileSinPadre=memo[k-2]+likes[k];
-        }
-        
+           likesBaile=likes[r] + maxLikes(convierte,likes,1,memo,k,r+1,diferenciaN-1);
 
+        }
 
     }
+    int likesNoBaile=maxLikes(convierte,likes,0,memo,k,r+1,diferenciaN);
+    memo[r][d][bailo]=max(likesNoBaile,likesBaile);
+    return memo[r][d][bailo];
 }
 int main()
 {
@@ -37,14 +35,24 @@ int main()
     cin>>k;
     int* convierte=new int[k+1];
     int* likes=new int[k+1];
-    int* memo=new int[k+1];
+    int*** memo=new int**[k+1];
     for(int i=1;i<=k;i++){
         int ai;
         cin>>ai;
         convierte[i]=ai;
-        likes[i]=ai;
-        memo[i]=-1;
+        memo[i]=new int*[k];
+        for(int j=0;j<k;j++){
+            memo[i][j]=new int[2];
+            for(int m=0;m<2;m++){
+                memo[i][j][m]=-1;
+            }
+        }
     }
-    
+    for(int i=1;i<=k;i++){
+        int ai;
+        cin>>ai;
+        likes[i]=ai;
+    }
+    cout<<maxLikes(convierte,likes,0,memo,k,1,0)<<endl;
     return 0;
 }

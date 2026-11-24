@@ -8,6 +8,11 @@
 > implementaciones, bugs encontrados y cómo se corrigieron, resultados de pruebas y dudas
 > abiertas. Si se usó IA ese día, indicar herramienta, consulta y qué se hizo con la
 > respuesta. Una bitácora escrita íntegramente el día de la entrega implica pérdida de puntos.
+
+## 2026-11-24 — Martina González 
+- Voy a implementar el ejercicio 9, luego de la explicación de clase
+- Terminé de implementarla, la voy a probar
+
 ## 2026-11-16 — Martina González 
 - Pensé el ejercicio 9, lo que queremos maximizar son los likes, pero la limitante en este ejercicio es no perder, así que pensé en poder un contador que sea golesAnotados-golesRecibidos y nunca dejar que sea negativo. Supongo que en las llamadas a la matriz memo, van a ser entre la opción de bailar y no bailar, esa opción se va a dar siempre y cuando el contador no quede negativo. 
 Lo arranqué a hacer y no entiendo porque se necesitaría una matriz y no un array, voy a arrancar a hacerlo con el array hasta darme cuenta
@@ -35,12 +40,3 @@ Se ve en el ejemplo 5: "Los dos últimos tiros valen mucho, pero en esas rondas 
 
 ## 2026-11-03 — Martina González
 - Volví a leer la letra del ejercicio 7, habíamos hablado en clase de merge sort, sumando la cantidad de remontadas cuando corresponde. Copié y pegué el código de merge sort de las diapositivas, y lo modifiqué. No lo probé porque no encontré las pruebas. 
-
-
-## 2026-MM-DD — Nombre
-- Ejemplo: Leí la letra del ejercicio 6. Primera idea: ... pero la restricción de
-  complejidad pide ..., así que ...
-
-## AAAA-MM-DD — En conjunto
-- Ejemplo: Implementamos ... Bug: ... Lo corregimos ...
-- Pasan los casos de prueba 1 a 4 del ejercicio 6.
