@@ -9,9 +9,16 @@
 > abiertas. Si se usó IA ese día, indicar herramienta, consulta y qué se hizo con la
 > respuesta. Una bitácora escrita íntegramente el día de la entrega implica pérdida de puntos.
 
+
+## 2026-11-24 — Martina González 
+- Leí el ejercicio 10, busqué el modelo de backtracking de las diapositivas. Pensé lo siguiente: representar la solucion con un array del 0 al 9 y que en cada posicion esté la letra que le corresponda, es solución lo que va a hacer es reemplazar y fijarse si es correcta la suma. Puedo aplicar movimiento se va a fijar si esa letra no está ya asignada para otro número y supongo pero no estoy segura que se va a fijar si tiene sentido la suma, pero de eso estoy dudando si no se encarga directamente esSolucion, pensandolo más también se deberíafijar si tiene sentido respecto a las letras ya asignadas. Aplicar movimiento asigna la letra a un lugar del array. Deshacer movimiento desasigna la letra del array.
+- Arranqué a implementarlo, sin la parte de minimizar, con la estructura vista en clase
+
 ## 2026-11-24 — Martina González 
 - Voy a implementar el ejercicio 9, luego de la explicación de clase
 - Terminé de implementarla, la voy a probar
+- Terminé de probarlos tests del ejercicio 9
+
 
 ## 2026-11-16 — Martina González 
 - Pensé el ejercicio 9, lo que queremos maximizar son los likes, pero la limitante en este ejercicio es no perder, así que pensé en poder un contador que sea golesAnotados-golesRecibidos y nunca dejar que sea negativo. Supongo que en las llamadas a la matriz memo, van a ser entre la opción de bailar y no bailar, esa opción se va a dar siempre y cuando el contador no quede negativo. 

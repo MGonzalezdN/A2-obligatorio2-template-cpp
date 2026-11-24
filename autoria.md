@@ -19,6 +19,7 @@
 
 ## Ejercicio 9
 - Implementación íntegramente propia, sin fuentes externas.
+para el maximo lo busqué porque INT_MAX no me anda
 
 ## Ejercicio 10
 - Implementación íntegramente propia, sin fuentes externas.
