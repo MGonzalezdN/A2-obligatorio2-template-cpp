@@ -1,14 +1,12 @@
 # Bitácora — Obligatorio 2
 
-**Integrantes:** Nombre Apellido (Nº estudiante), Nombre Apellido (Nº estudiante)
+**Integrante:** Martina Gonzalez (332461)
 
-> **Instrucciones** (borrar esta sección antes de entregar): agregar una entrada por
-> cada día trabajado, indicando la fecha y quién trabajó (un integrante o "En conjunto").
-> Registrar el proceso real: ideas exploradas, decisiones y su justificación, partes de
-> implementaciones, bugs encontrados y cómo se corrigieron, resultados de pruebas y dudas
-> abiertas. Si se usó IA ese día, indicar herramienta, consulta y qué se hizo con la
-> respuesta. Una bitácora escrita íntegramente el día de la entrega implica pérdida de puntos.
-
+## 2026-11-24 — Martina González 
+- Voy a seguir con la implementación y agregarle la parte de minimización, me puse a analizar lo que había hecho y no me pareció lo mejor, así que lo voy a volver a pensar, lo que pensé es arrancar a probar con un for los posibles valores de cada letra, arrancando por la primera y así sucesivamente. Me estaba complicando lo del array del 0 al 9 entonces voy a hacer un array del 0 al 25, y que cada posición represente una letra, y tener un bool* del 0 al 9 que diga si se asignó ese número.
+Hice la primera parte de solucion, mejorSolucion que son bastante directas.
+Ahora estoy con aplicar movimiento, y estoy pensando en ir aplicando valores por columnas tomando los sumandos y el resultado uno arriba del otro, estoy pensando si tengo que tener un parámetro de la función principal que sea el carry de esa columna.
+Pensandolo, lo de la columna está mal, lo que tengo que hacer es elegir una letra para que tome el valor que le está dando el for. Me tengo que fijar columna por columna si la suma es consistente, o si hay alguna otra letra que no tiene valor. Terminé la implementación, corrí las pruebas, primero el test de los 0 me dio mal porque en puedo podar, no probaba con el mínimo posible, probaba con el máximo. En el test de ejemplo1 me daba imposible porque en la parte de puedo aplicar movimiento tenía un problema que retornaba true cuando encontraba una letra que no tenía asignada un valor, no entendía por qué estaba mal, le pedí a chat que me dijera, y que me ayudara a pensar una posible solución, dada la letra. Me conviene ponerlo afuera de la palabra. 
 
 ## 2026-11-24 — Martina González 
 - Leí el ejercicio 10, busqué el modelo de backtracking de las diapositivas. Pensé lo siguiente: representar la solucion con un array del 0 al 9 y que en cada posicion esté la letra que le corresponda, es solución lo que va a hacer es reemplazar y fijarse si es correcta la suma. Puedo aplicar movimiento se va a fijar si esa letra no está ya asignada para otro número y supongo pero no estoy segura que se va a fijar si tiene sentido la suma, pero de eso estoy dudando si no se encarga directamente esSolucion, pensandolo más también se deberíafijar si tiene sentido respecto a las letras ya asignadas. Aplicar movimiento asigna la letra a un lugar del array. Deshacer movimiento desasigna la letra del array.
@@ -37,7 +35,7 @@ Se ve en el ejemplo 5: "Los dos últimos tiros valen mucho, pero en esas rondas 
 - Le pregunté a char como hacer para pasar un int a un string, y es con to_string(). Compilé y el test me dio un número enorme porque en el if me olvidé de poner diferente de 0. Corriendo las pruebas de 100.in.txt me di cuenta que no estoy tienendo en cuenta los casos que son mayores que 2
 
 
-## 2026-11-15 — Martina González DUDA HAY UQE PONER EL CHAT?
+## 2026-11-15 — Martina González 
 - Estoy haciendo una corrida a mano para ver en qué está fallando el ejericicio, vi lo de size of que me pareció que podía estar ahí el error y le pregunté a chatgpt (https://chatgpt.com/share/6afa2fd9-a604-83e9-a209-b7c0193ffa5e) si eso se podía usar en c y me dijo que sí pero que en punteros no da el resultado que yo quiero que de porque hace el largo del puntero. Entocnes, voy a cambiar eso y ver si me da bien. Ahora el resultado me dio menos de lo que tenía que dar, así que supongo que me falta contar casos, sigo con la corrida a mano. En la corrida a mano me di cuenta que me estaban faltando contar casos porque solo los estoy comparando con el primero del array, pero eso no quiere decir que mas adelante no haya remontadas épicas. Enotnces, voy a poner otro contador para que se fije si más adelante hay. Ahora hice el caso de prueba y me dio un número más grande del que me tenía que dar
 
 ## 2026-11-04 — Martina González
